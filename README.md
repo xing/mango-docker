@@ -2,6 +2,8 @@
 This Docker image is based on [butomo1989/docker-android](https://github.com/butomo1989/docker-android).
 It contains an Android Emulator running a Nexus 5 on Android 8.0 with instant boot and no Appium dependency.
 
+It was designed to work with [Mango](https://github.com/xing/mango), a Fastlane plugin that takes care about creation, healthiness and other parameters of Emulator.
+
 The Image exposes 1 port:
 
 | Port | Function       |
@@ -11,12 +13,11 @@ The Image exposes 1 port:
 ## How to Build
 Android Base Image:  
 ```sh
-docker build -t mango-base -f dockerfiles/AndroidBase .
+docker build -t mango-base -f mango-base/Dockerfile .
 ```
 Emulator Image:  
 ```sh
-unzip -quo user_data/android_emulator.zip -d android_emulator_dump
-docker build -t mango-docker -f dockerfiles/AndroidEmulator .
+docker build -t mango-docker -f Dockerfile .
 ```
 
 **If you change the userdata image rember to zip it before commiting**

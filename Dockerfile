@@ -113,9 +113,9 @@ COPY devices /root/devices
 COPY src /root/src
 COPY supervisord.conf /root/
 
-RUN unzip -quo user_data/android_emulator.zip -d android_emulator_dump
+COPY user_data/android_emulator.zip /root/android_emulator.zip
 
-COPY android_emulator_dump/android_emulator /root/android_emulator_dump
+RUN unzip -quo /root/android_emulator.zip -d /root/android_emulator_dump
 
 RUN chmod -R +x /root/src && chmod +x /root/supervisord.conf
 

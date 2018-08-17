@@ -1,4 +1,4 @@
-FROM docker.dc.xing.com/mobile-releases/android-base:latest
+FROM android-base:latest
 
 ENV DEVICE="Nexus 5X"
 

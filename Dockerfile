@@ -1,4 +1,4 @@
-FROM mango-base:latest
+FROM joesss/mango-base:latest
 
 ENV DEVICE="Nexus 5X"
 
@@ -112,6 +112,8 @@ COPY devices /root/devices
 #===================
 COPY src /root/src
 COPY supervisord.conf /root/
+
+RUN unzip -quo user_data/android_emulator.zip -d android_emulator_dump
 
 COPY android_emulator_dump/android_emulator /root/android_emulator_dump
 

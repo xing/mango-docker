@@ -15,6 +15,7 @@ docker build -t mango-base -f dockerfiles/AndroidBase .
 ```
 Emulator Image:  
 ```sh
+unzip -quo user_data/android_emulator.zip -d android_emulator_dump
 docker build -t mango-docker -f dockerfiles/AndroidEmulator .
 ```
 

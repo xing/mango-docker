@@ -9,13 +9,13 @@ The Image exposes 1 port:
 | 6080 | noVNC          |
 
 ## How to Build
-Emulator Image:  
-```sh
-docker build -t mango-docker -f dockerfiles/AndroidEmulator .
-```
 Android Base Image:  
 ```sh
 docker build -t mango-base -f dockerfiles/AndroidBase .
+```
+Emulator Image:  
+```sh
+docker build -t mango-docker -f dockerfiles/AndroidEmulator .
 ```
 
 **If you change the userdata image rember to zip it before commiting**

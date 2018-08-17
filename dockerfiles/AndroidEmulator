@@ -1,4 +1,4 @@
-FROM android-base:latest
+FROM mango-base:latest
 
 ENV DEVICE="Nexus 5X"
 

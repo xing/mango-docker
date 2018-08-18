@@ -22,6 +22,7 @@ RUN apt-get -qqy update && apt-get -qqy install --no-install-recommends \
     ubuntu-vm-builder \
     libssl1.0-dev \
     libreadline-dev \
+    cpu-checker \
  && rm -rf /var/lib/apt/lists/*
 
 #=====================

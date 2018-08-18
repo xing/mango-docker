@@ -92,9 +92,6 @@ def run():
 
     prepare_avd(device, avd_name)
 
-    copy_emu_command = 'rm -rf android_emulator && mv android_emulator_dump/android_emulator android_emulator'
-    subprocess.check_call(copy_emu_command, shell=True)
-
     logger.info('Run emulator...')
     cmd = 'emulator/emulator @{name} -cores 6 -gpu off -no-boot-anim -no-audio -verbose'.format(name=avd_name)
     subprocess.Popen(cmd.split(), stdout=subprocess.PIPE).communicate()

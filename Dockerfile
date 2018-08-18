@@ -24,6 +24,10 @@ RUN apt-get -qqy update && apt-get -qqy install --no-install-recommends \
     libreadline-dev \
  && rm -rf /var/lib/apt/lists/*
 
+COPY user_data/android_emulator.zip /root/android_emulator.zip
+
+RUN unzip -quo /root/android_emulator.zip -d /root/android_emulator_dump
+
 #=====================
 # Install Android images and emulator
 #=====================
@@ -112,10 +116,6 @@ COPY devices /root/devices
 #===================
 COPY src /root/src
 COPY supervisord.conf /root/
-
-COPY user_data/android_emulator.zip /root/android_emulator.zip
-
-RUN unzip -quo /root/android_emulator.zip -d /root/android_emulator_dump
 
 RUN chmod -R +x /root/src && chmod +x /root/supervisord.conf
 

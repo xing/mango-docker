@@ -1,6 +1,6 @@
 # mango-docker
 This Docker image is based on [butomo1989/docker-android](https://github.com/butomo1989/docker-android).
-It contains an Android Emulator running a Nexus 5 on Android 8.0 with instant boot and no Appium dependency.
+It contains an Android Emulator running a Nexus 5 on Android 8.0 with no Appium dependency.
 
 It was designed to work with [Mango](https://github.com/xing/mango), a Fastlane plugin that takes care about creation, healthiness and other parameters of Emulator.
 

@@ -1,6 +1,7 @@
 FROM joesss/mango-base:latest
 
 ENV DEVICE="Nexus 5X"
+ENV CI_RUN=1
 
 ENV DEBIAN_FRONTEND=noninteractive
 

@@ -108,7 +108,7 @@ ENV JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/jre" \
 # Install Android SDK and SDK packages
 #=====================
 ARG ANDROID_BUILD_TOOLS_VERSION=27.0.3
-ARG ANDROID_PLATFORM_VERSION="android-26"
+ARG ANDROID_PLATFORM_VERSION="android-27"
 ARG SDK_VERSION=sdk-tools-linux-4333796
 
 ENV SDK_VERSION=$SDK_VERSION \
@@ -122,8 +122,8 @@ RUN wget -O tools.zip https://dl.google.com/android/repository/${SDK_VERSION}.zi
 
 ENV PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin
 
-ARG ANDROID_VERSION=8.0
-ARG API_LEVEL=26
+ARG ANDROID_VERSION=8.1
+ARG API_LEVEL=27
 ARG BROWSER=chrome
 ENV ANDROID_VERSION=$ANDROID_VERSION \
     API_LEVEL=$API_LEVEL \

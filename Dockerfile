@@ -29,7 +29,7 @@ RUN apt-get -qqy update && apt-get -qqy install --no-install-recommends \
 # Install Android images and emulator
 #=====================
 
-ARG API_LEVEL=26
+ARG API_LEVEL=27
 ARG SYS_IMG=x86
 ARG IMG_TYPE=google_apis
 

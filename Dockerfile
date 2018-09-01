@@ -1,4 +1,4 @@
-FROM joesss/mango-base:latest
+FROM joesss/mango-base:crash
 
 ENV DEVICE="Nexus 5X"
 
